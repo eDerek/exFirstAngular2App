@@ -10,10 +10,11 @@ import { MessageService } from '../message.service';
 export class MessagesComponent implements OnInit {
 
   constructor(public messageService: MessageService) { 
-    //this public messageService will be bound to this component
+    console.log("MessagesComponent instance created------------");
   }
 
   ngOnInit() {
+    console.log("message component init....ed");
   }
 
 }
