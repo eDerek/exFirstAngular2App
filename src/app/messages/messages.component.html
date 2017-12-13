@@ -5,6 +5,6 @@
             (click)="messageService.clear()">clear</button>
 
     <ul>
-    <li *ngFor='let message of messageService.messages'> {{message}} </li>
+    <li *ngFor='let message of messageService.messages; let i = index'> {{i}}----------{{message}} </li>
     </ul>
   </div>
