@@ -11,7 +11,7 @@ import { MessageService } from '../message.service';
 export class HeroesComponent implements OnInit {
 
   constructor(private heroService: HeroService, private messageService: MessageService) {
-    heroService.getHeroes().subscribe(heros => this.heros = heros);
+    heroService.getHeroesViaHttp().subscribe(heros => this.heros = heros);
    }
 
   ngOnInit() {
