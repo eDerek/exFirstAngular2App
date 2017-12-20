@@ -11,10 +11,14 @@ import { MessageService } from '../message.service';
 export class HeroesComponent implements OnInit {
 
   constructor(private heroService: HeroService, private messageService: MessageService) {
-    heroService.getHeroesViaHttp().subscribe(heros => this.heros = heros);
+    this.loadHeros();
    }
 
   ngOnInit() {
+  }
+
+  loadHeros(): void{
+    this.heroService.getHeroesViaHttp().subscribe(heros => this.heros = heros);
   }
 
   hero_1: Hero = {
@@ -31,4 +35,20 @@ export class HeroesComponent implements OnInit {
     this.messageService.add(hero.name+" clicked");
     this.selectedHero = hero;
   }
+
+  add(name: string): void {
+    if (!name) { return; }
+    name = name.trim();
+    this.heroService.addHeroByName(name)
+      .subscribe(hero => {
+        //this.heros.push(hero);
+        this.loadHeros();
+      });
+  }
+
+  delete(hero: Hero): void {
+    // this.heros = this.heros.filter(h => h !== hero);
+    this.heroService.deleteHero(hero).subscribe(_ => {console.log(_);this.loadHeros();});
+  }
+
 }
