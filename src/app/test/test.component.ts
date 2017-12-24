@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { BigHero } from '../BigHero';
+import { BIGHEROES } from '../data_source/heroes.source';
 
 @Component({
   selector: 'app-test',
@@ -14,5 +16,7 @@ export class TestComponent implements OnInit {
   ngOnInit() {
     console.log("test component init....ed");
   }
+
+  bigHeroes: BigHero[] = BIGHEROES;
 
 }

@@ -21,15 +21,18 @@ export class HeroesComponent implements OnInit {
     this.heroService.getHeroesViaHttp().subscribe(heros => this.heros = heros);
   }
 
+//just for test
   hero_1: Hero = {
     id: 1,
     name: 'Windstorm'
   };
 
   heros: Hero[];
-
+  
+//Replaced by a router link-----------------------
   selectedHero: Hero;
 
+  //Replaced by a router link-----------------------
   onSelect(hero):void{
     console.log(hero.name+" clicked");
     this.messageService.add(hero.name+" clicked");
