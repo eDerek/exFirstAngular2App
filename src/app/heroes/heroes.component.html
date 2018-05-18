@@ -2,6 +2,10 @@
 <div><span>id: </span>{{hero_1.id}}</div>
 <div><span>name: </span>{{hero_1.name}}</div>
 
+<h2>{{ hero_2.name | uppercase}} Details</h2>
+<div><span>id: </span>{{hero_2.id}}</div>
+<div><span>name: </span>{{hero_2.name}}</div>
+
 <div>
   <label>name:
     <input [(ngModel)]="hero_1.name" placeholder="put something here">
@@ -32,7 +36,7 @@
   </ul>
 
   <div>
-    <label>Hero name:
+    <label exStyle="true">Hero name:
       <input #heroName />
     </label>
     <!-- (click) passes input value to add() and then clears the input -->

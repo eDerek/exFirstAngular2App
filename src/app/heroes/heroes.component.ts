@@ -27,6 +27,8 @@ export class HeroesComponent implements OnInit {
     name: 'Windstorm'
   };
 
+  hero_2: Hero = new Hero(50, 'dfasdfasdfads');
+
   heros: Hero[];
   
 //Replaced by a router link-----------------------

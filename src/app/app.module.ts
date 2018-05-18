@@ -16,6 +16,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService }  from './in-memory-data.service';
 import { HeroSearchComponent } from './hero-search/hero-search.component';
+import { PowerBoostCalculatorComponent } from './test-components/test-pipe.component';
+import { ExponentialStrengthPipe } from './pipes/exponential-strength.pipe';
+import { HeroAsyncMessageComponent } from './test-components/hero-async-message.component';
+import { ExStyleDirective } from './directives/ex-style-directive';
 
 @NgModule({
   declarations: [
@@ -25,7 +29,11 @@ import { HeroSearchComponent } from './hero-search/hero-search.component';
     MessagesComponent,
     TestComponent,
     DashboardComponent,
-    HeroSearchComponent
+    HeroSearchComponent,
+    PowerBoostCalculatorComponent,
+    ExponentialStrengthPipe,
+    HeroAsyncMessageComponent,
+    ExStyleDirective
   ],
   imports: [
     BrowserModule,
